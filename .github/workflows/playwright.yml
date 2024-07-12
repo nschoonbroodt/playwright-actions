@@ -2,6 +2,26 @@ name: Playwright Tests
 
 on:
   workflow_dispatch:
+    inputs:
+      user:
+        type: choice
+        options:
+          - Nada
+          - Nicolas
+      class:
+        type: choice
+        options:
+          - "Cardio HIIT"
+          - "Cardio Max"
+          - "Intensif"
+      day:
+        type: number
+      hour:
+        type: number
+      minutes:
+        type: number
+      location:
+        type: string
 
 jobs:
   test:
