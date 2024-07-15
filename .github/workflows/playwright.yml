@@ -15,11 +15,17 @@ on:
           - "Cardio Max"
           - "Intensif"
       day:
-        type: number
-      hour:
-        type: number
-      minute:
-        type: number
+        type: choice
+        options:
+          - Dimanche
+          - Lundi
+          - Mardi
+          - Mercredi
+          - Jeudi
+          - Vendredi
+          - Samedi
+      time:
+        type: string
       location:
         type: string
 env:
@@ -27,8 +33,7 @@ env:
   INPUT_CLASS: ${{ github.event.inputs.class }}
   INPUT_LOCATION: ${{ github.event.inputs.location }}
   INPUT_DAY: ${{ github.event.inputs.day }}
-  INPUT_HOUR: ${{ github.event.inputs.hour }}
-  INPUT_MINUTE: ${{ github.event.inputs.minute }}
+  INPUT_TIME: ${{ github.event.inputs.time }}
   USER_NADA_LOGIN: ${{ secrets.USER_NADA_LOGIN }}
   USER_NADA_PASSWORD: ${{ secrets.USER_NADA_PASSWORD }}
   USER_NICOLAS_LOGIN: ${{ secrets.USER_NICOLAS_LOGIN }}
