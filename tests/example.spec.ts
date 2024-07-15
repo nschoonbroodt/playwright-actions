@@ -40,4 +40,22 @@ test("has title", async ({ page }) => {
     .getAttribute("href");
   expect(class_url, "Did not find the class").not.toBeNull();
   console.log(class_url);
+
+  // Step 2: login
+  const login = env["USER_" + env.INPUT_USER.toUpperCase + "_LOGIN"];
+  const password = env["USER_" + env.INPUT_USER.toUpperCase + "_PASSWORD"];
+
+  await page.getByRole("link", { name: "Mon Compte" }).click();
+  await page.getByLabel("Adresse email").click();
+  await page.getByLabel("Adresse email").fill(login);
+  await page.getByLabel("Mot de passe").fill(password);
+  await page.getByRole("button", { name: "S'identifier" }).click();
+
+  // Step 3: register
+  await page.goto(class_url as string);
+  await page.getByRole("link", { name: "RÉSERVER" }).click();
+  await page.getByRole("button", { name: "Réserver" }).click();
+
+  // Step 4: confirm via backlink
+  // TODO
 });
