@@ -1,8 +1,6 @@
 import { test, expect } from "@playwright/test";
+import env from "../env.js";
 
 test("has title", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  console.log(env.INPUT_CLASS);
 });
