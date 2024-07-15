@@ -29,6 +29,10 @@ env:
   INPUT_DAY: ${{ github.event.inputs.day }}
   INPUT_HOUR: ${{ github.event.inputs.hour }}
   INPUT_MINUTE: ${{ github.event.inputs.minute }}
+  USER_NADA_LOGIN: ${{ secrets.USER_NADA_LOGIN }}
+  USER_NADA_PASSWORD: ${{ secrets.USER_NADA_PASSWORD }}
+  USER_NICOLAS_LOGIN: ${{ secrets.USER_NICOLAS_LOGIN }}
+  USER_NICOLAS_PASSWORD: ${{ secrets.USER_NICOLAS_PASSWORD }}
 
 jobs:
   test:
