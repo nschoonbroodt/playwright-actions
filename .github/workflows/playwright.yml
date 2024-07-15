@@ -28,12 +28,15 @@ on:
         type: string
       location:
         type: string
+      request_token:
+        type: string
 env:
   INPUT_USER: ${{ github.event.inputs.user }}
   INPUT_CLASS: ${{ github.event.inputs.class }}
   INPUT_LOCATION: ${{ github.event.inputs.location }}
   INPUT_DAY: ${{ github.event.inputs.day }}
   INPUT_TIME: ${{ github.event.inputs.time }}
+  INPUT_REQUEST_TOKEN: ${{ github.event.inputs.request_token }}
   USER_NADA_LOGIN: ${{ secrets.USER_NADA_LOGIN }}
   USER_NADA_PASSWORD: ${{ secrets.USER_NADA_PASSWORD }}
   USER_NICOLAS_LOGIN: ${{ secrets.USER_NICOLAS_LOGIN }}
