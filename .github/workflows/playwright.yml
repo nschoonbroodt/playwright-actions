@@ -23,12 +23,12 @@ on:
       location:
         type: string
 env:
-INPUT_USER: ${{ github.event.inputs.user }}
-INPUT_CLASS: ${{ github.event.inputs.class }}
-INPUT_LOCATION: ${{ github.event.inputs.location }}
-INPUT_DAY: ${{ github.event.inputs.day }}
-INPUT_HOUR: ${{ github.event.inputs.hour }}
-INPUT_MINUTE: ${{ github.event.inputs.minute }}
+  INPUT_USER: ${{ github.event.inputs.user }}
+  INPUT_CLASS: ${{ github.event.inputs.class }}
+  INPUT_LOCATION: ${{ github.event.inputs.location }}
+  INPUT_DAY: ${{ github.event.inputs.day }}
+  INPUT_HOUR: ${{ github.event.inputs.hour }}
+  INPUT_MINUTE: ${{ github.event.inputs.minute }}
 
 jobs:
   test:
