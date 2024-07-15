@@ -39,11 +39,10 @@ test("has title", async ({ page }) => {
     .first()
     .getAttribute("href");
   expect(class_url, "Did not find the class").not.toBeNull();
-  console.log(class_url);
 
   // Step 2: login
-  const login = env["USER_" + env.INPUT_USER.toUpperCase + "_LOGIN"];
-  const password = env["USER_" + env.INPUT_USER.toUpperCase + "_PASSWORD"];
+  const login = env["USER_" + env.INPUT_USER.toUpperCase() + "_LOGIN"];
+  const password = env["USER_" + env.INPUT_USER.toUpperCase() + "_PASSWORD"];
 
   await page.getByRole("link", { name: "Mon Compte" }).click();
   await page.getByLabel("Adresse email").click();
