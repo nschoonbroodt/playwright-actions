@@ -1,9 +1,0 @@
-name: run on vercel
-on:
-  schedule:
-    - cron: "6,36 * * * *"
-jobs:
-  curl:
-    runs-on: ubuntu-latest
-    steps:
-    - run: curl "https://next-booking-nine.vercel.app/api/hello"
