@@ -6,8 +6,8 @@ on:
       user:
         type: choice
         options:
-          - Nada
-          - Nicolas
+          - nada
+          - nicolas
       class:
         type: choice
         options:
