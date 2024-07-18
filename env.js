@@ -11,7 +11,7 @@ const envSchema = z.object({
   USER_NICOLAS_LOGIN: z.string().email(),
   USER_NADA_PASSWORD: z.string(),
   USER_NICOLAS_PASSWORD: z.string(),
-  REQUEST_TOKEN: z.string(),
+  INPUT_REQUEST_TOKEN: z.string(),
 });
 
 const env = envSchema.parse(process.env);
